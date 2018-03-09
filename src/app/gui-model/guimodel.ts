@@ -331,13 +331,13 @@ export class GuiModel {
                     "id": "mainmenu",
                     "name": "MainMenu",
                     "elementList": [
-                        {
+                        /*{
                             "type": "button",
                             "name": "Contacts",
                             "icon": "fa-user",
                             "color": "blue",
                             "page": "contactspage",
-                        },
+                        },*/
                         {
                             "type": "button",
                             "name": "Companies",
