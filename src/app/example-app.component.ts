@@ -1,17 +1,17 @@
 /* angular/path imports */
 import {Component} from '@angular/core';
-import * as path from "path-framework/app/path-framework/path";
+import * as path from "path-framework-weberm16/app/path-framework/path";
 
 /* model imports */
 import {GuiModel} from './gui-model/guimodel';
 import * as handler from './gui-model/form/handlers'
 import * as beans from './gui-model/generated/forms'
-import {TranslationService} from "path-framework/app/path-framework/service/translation.service";
+import {TranslationService} from "path-framework-weberm16/app/path-framework/service/translation.service";
 import {ExampleTranslationService} from "./example-translation-service";
 
 @Component({
     selector: 'path-application',
-    templateUrl: './../../node_modules/path-framework/app/path-framework/path-app.component.html',
+    templateUrl: './../../node_modules/path-framework-weberm16/app/path-framework/path-app.component.html',
     providers: [path.PathService, { provide: TranslationService, useClass: ExampleTranslationService }]
 })
 export class ExampleAppComponent extends path.PathAppComponent {
