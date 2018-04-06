@@ -40,6 +40,18 @@ export class GuiModel {
                             "width": 2
                         },
                         {
+                            "id": "evtMobile",
+                            "type": "number",
+                            "name": "Mobile Number",
+                            "width": 2
+                        },
+                        {
+                            "id": "eMail",
+                            "type": "email",
+                            "name": "Email",
+                            "width": 2
+                        },
+                        {
                             "id": "comment",
                             "type": "text",
                             "name": "Comments",
