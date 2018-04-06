@@ -42,13 +42,7 @@ export class GuiModel {
                         {
                             "id": "evtMobile",
                             "type": "number",
-                            "name": "Mobile Number",
-                            "width": 2
-                        },
-                        {
-                            "id": "eMail",
-                            "type": "email",
-                            "name": "Email",
+                            "name": "MobileNumber",
                             "width": 2
                         },
                         {
