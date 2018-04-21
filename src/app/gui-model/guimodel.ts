@@ -2,416 +2,65 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "Path Example",
-            "formList": [
-                {
-                    "id": "PersonForm",
-                    "title": "Person",
-                    "url": "/person",
-                    "formFieldList": [
-                        {
-                            "id": "familyName",
-                            "type": "text",
-                            "name": "FamilyName",
-                            "width": 1,
-                            "required": true
-                        },
-                        {
-                            "id": "firstName",
-                            "type": "text",
-                            "name": "FirstName",
-                            "width": 1,
-                            "required": true
-                        },
-                        {
-                            "id":   "company",
-                            "type": "autocomplete",
-                            "name": "Company",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "companyKey",
-                            "form": "CompanyForm",
-                            "url": "/company",
-                            "width": 2
-                        },
-                        {
-                            "id": "evtBirth",
-                            "type": "date",
-                            "name": "Birthday",
-                            "width": 2
-                        },
-                        {
-                            "id": "evtMobile",
-                            "type": "number",
-                            "name": "MobileNumber",
-                            "width": 2
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "CompanyForm",
-                    "title": "Company",
-                    "url": "/company",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "CompanyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "city",
-                            "type": "text",
-                            "name": "City",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "InlineTestForm",
-                    "title": "Company",
-                    "url": "/company",
-                    "borderStyle": "None",
-                    "headerVisible": false,
-                    "footerVisible": false,
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "CompanyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "city",
-                            "type": "text",
-                            "name": "City",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "ProjectForm",
-                    "title": "Project",
-                    "url": "/project",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "ProjectName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id":   "company",
-                            "type": "autocomplete",
-                            "name": "Company",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "companyKey",
-                            "form": "CompanyForm",
-                            "url": "/company",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "evtStart",
-                            "type": "date",
-                            "name": "StartDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "evtEnd",
-                            "type": "date",
-                            "name": "EndDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "HobbyForm",
-                    "title": "Hobby",
-                    "url": "/hobby",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "translation",
-                            "name": "HobbyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "TaskForm",
-                    "title": "Task",
-                    "url": "/task",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "TaskName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id":   "project",
-                            "type": "autocomplete",
-                            "name": "Project",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "projectKey",
-                            "form": "ProjectForm",
-                            "url": "/project",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "evtStart",
-                            "type": "date",
-                            "name": "StartDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "evtEnd",
-                            "type": "date",
-                            "name": "EndDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "AddTaskForm",
-                    "title": "AddTask",
-                    "url": "/person/:personKey/task",
-                    "formFieldList": [
-                        {
-                            "id": "taskKey",
-                            "type": "autocomplete",
-                            "name": "Task",
-                            "wordSearchEnabled": true,
-                            "url": "/task",
-                            "width": 2,
-                            "form": "TaskForm",
-                            "required": true,
-                            "readonly": true,
-                            "defaultKey": "taskKey"
-                        },
-                        {
-                            "id": "personKey",
-                            "type": "autocomplete",
-                            "name": "Person",
-                            "wordSearchEnabled": true,
-                            "url": "/person",
-                            "width": 2,
-                            "required": true,
-                            "readonly": true,
-                            "defaultKey": "personKey"
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "UserForm",
-                    "title": "Person",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "User",
-                            "width": 2,
-                            "required": true,
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-            ],
+            "title": "Share your Cooking Recipes",
             "pageList": [
                 {
                     "id": "mainmenu",
-                    "name": "MainMenu",
+                    "name": "Startseite",
                     "elementList": [
                         {
                             "type": "button",
-                            "name": "Contacts",
+                            "name": "Rezepte",
                             "icon": "fa-user",
                             "color": "blue",
-                            "page": "contactspage",
+                            "page": "recipespage",
                         },
                         {
                             "type": "button",
-                            "name": "Companies",
+                            "name": "Zutaten",
                             "icon": "fa-industry",
                             "color": "lime",
-                            "page": "companiespage",
+                            "page": "ingrediantspage",
                         },
                         {
                             "type": "button",
-                            "name": "Projects",
+                            "name": "Regionen",
                             "icon": "fa-cubes",
                             "color": "yellow",
-                            "page": "projectspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Hobbies",
-                            "icon": "fa-bicycle",
-                            "color": "carrot",
-                            "page": "hobbiespage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Tasks",
-                            "icon": "fa-tasks",
-                            "color": "wisteria",
-                            "page": "taskspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "ElementTest",
-                            "icon": "fa-globe",
-                            "width": 2,
-                            "color": "asbestos",
-                            "page": "elementspage",
+                            "page": "regionspage",
                         }
                     ]
                 },
                 {
-                    "id": "contactspage",
-                    "name": "Contacts",
+                    "id": "recipespage",
+                    "name": "Rezepte",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "newButton",
-                            "name": "NewPerson",
+                            "name": "Neues Rezept",
                             "icon": "fa-user",
                             "color": "green",
                             "form": {
-                                "form": "PersonForm"
+                                "form": "RecipeForm"
                             }
                         },
                         {
                             "type": "list",
-                            "name": "PersonList",
+                            "name": "RecipeList",
                             "icon": "fa-user",
                             "color": "blue",
                             "search": true,
                             "url": "/person",
-                            "page": "personpage",
+                            "page": "recipepage",
                         },
                     ]
                 },
                 {
-                    "id": "personpage",
-                    "name": "Person",
+                    "id": "ingrediantspage",
+                    "name": "Zutaten",
                     "elementList": [
                         {
                             "type": "backbutton",
@@ -442,8 +91,8 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "personhobbiespage",
-                    "name": "Hobbies",
+                    "id": "regionspage",
+                    "name": "Regionen",
                     "elementList": [
                         {
                             "type": "backbutton",
@@ -730,6 +379,329 @@ export class GuiModel {
                             "search": false,
                             "url": "/company/link"
                         },
+                    ]
+                },
+            ],
+            "formList": [
+                {
+                    "id": "PersonForm",
+                    "title": "Person",
+                    "url": "/person",
+                    "formFieldList": [
+                        {
+                            "id": "familyName",
+                            "type": "text",
+                            "name": "FamilyName",
+                            "width": 1,
+                            "required": true
+                        },
+                        {
+                            "id": "firstName",
+                            "type": "text",
+                            "name": "FirstName",
+                            "width": 1,
+                            "required": true
+                        },
+                        {
+                            "id":   "company",
+                            "type": "autocomplete",
+                            "name": "Company",
+                            "wordSearchEnabled": true,
+                            "defaultKey": "companyKey",
+                            "form": "CompanyForm",
+                            "url": "/company",
+                            "width": 2
+                        },
+                        {
+                            "id": "evtBirth",
+                            "type": "date",
+                            "name": "Birthday",
+                            "width": 2
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "CompanyForm",
+                    "title": "Company",
+                    "url": "/company",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "CompanyName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "city",
+                            "type": "text",
+                            "name": "City",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "InlineTestForm",
+                    "title": "Company",
+                    "url": "/company",
+                    "borderStyle": "None",
+                    "headerVisible": false,
+                    "footerVisible": false,
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "CompanyName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "city",
+                            "type": "text",
+                            "name": "City",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "ProjectForm",
+                    "title": "Project",
+                    "url": "/project",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "ProjectName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id":   "company",
+                            "type": "autocomplete",
+                            "name": "Company",
+                            "wordSearchEnabled": true,
+                            "defaultKey": "companyKey",
+                            "form": "CompanyForm",
+                            "url": "/company",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "evtStart",
+                            "type": "date",
+                            "name": "StartDate",
+                            "width": 1
+                        },
+                        {
+                            "id": "evtEnd",
+                            "type": "date",
+                            "name": "EndDate",
+                            "width": 1
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "HobbyForm",
+                    "title": "Hobby",
+                    "url": "/hobby",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "translation",
+                            "name": "HobbyName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "TaskForm",
+                    "title": "Task",
+                    "url": "/task",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "TaskName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id":   "project",
+                            "type": "autocomplete",
+                            "name": "Project",
+                            "wordSearchEnabled": true,
+                            "defaultKey": "projectKey",
+                            "form": "ProjectForm",
+                            "url": "/project",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "evtStart",
+                            "type": "date",
+                            "name": "StartDate",
+                            "width": 1
+                        },
+                        {
+                            "id": "evtEnd",
+                            "type": "date",
+                            "name": "EndDate",
+                            "width": 1
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "AddTaskForm",
+                    "title": "AddTask",
+                    "url": "/person/:personKey/task",
+                    "formFieldList": [
+                        {
+                            "id": "taskKey",
+                            "type": "autocomplete",
+                            "name": "Task",
+                            "wordSearchEnabled": true,
+                            "url": "/task",
+                            "width": 2,
+                            "form": "TaskForm",
+                            "required": true,
+                            "readonly": true,
+                            "defaultKey": "taskKey"
+                        },
+                        {
+                            "id": "personKey",
+                            "type": "autocomplete",
+                            "name": "Person",
+                            "wordSearchEnabled": true,
+                            "url": "/person",
+                            "width": 2,
+                            "required": true,
+                            "readonly": true,
+                            "defaultKey": "personKey"
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "UserForm",
+                    "title": "Person",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "User",
+                            "width": 2,
+                            "required": true,
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
                     ]
                 },
             ]
