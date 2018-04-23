@@ -1,25 +1,26 @@
 {
-  "name": "path-example",
-  "version": "0.2.15",
-  "description": "Path Application Framework Example",
+  "name": "Recipes",
+  "version": "1.0.0",
+  "description": "Recipes Application",
   "keywords": [
+    "Recipes",
     "GUI",
     "JSON",
     "REST",
     "Rapid Application Development",
     "Rapid Application Manufacturing"
   ],
-  "homepage": "https://github.com/innovad/path-example/",
+  "homepage": "https://github.com/zhaw-weberm16/Recipes/",
   "bugs": {
-    "url": "https://github.com/innovad/path-example/issues"
+    "url": "https://github.com/zhaw-weberm16/Recipes/issues"
   },
   "license": "LGPL-3.0",
   "author": {
-    "name": "Adrian Moser"
+    "name": "Manuel Weber"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/innovad/path-example.git"
+    "url": "https://github.com/zhaw-weberm16/Recipes.git"
   },
   "engines": {
     "node": "7.10.1",
