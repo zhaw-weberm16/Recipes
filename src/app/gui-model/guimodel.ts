@@ -14,6 +14,7 @@ export class GuiModel {
                             "icon": "fa-cutlery",
                             "color": "blue",
                             "page": "recipespage",
+                            "width": 2
                         },
                         {
                             "type": "button",
@@ -21,6 +22,7 @@ export class GuiModel {
                             "icon": "fa-apple",
                             "color": "carrot",
                             "page": "ingredientspage",
+                            "width": 2
                         },
                         {
                             "type": "button",
@@ -28,6 +30,7 @@ export class GuiModel {
                             "icon": "fa-globe",
                             "color": "yellow",
                             "page": "regionspage",
+                            "width": 2
                         }
                     ]
                 },
@@ -40,7 +43,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": "New Recipe",
+                            "name": "NewRecipe",
                             "icon": "fa-cutlery",
                             "color": "red",
                             "form": {
@@ -53,9 +56,9 @@ export class GuiModel {
                             "icon": "fa-cutlery",
                             "color": "blue",
                             "search": true,
-                            "url": "/person",
+                            "url": "/recipe",
                             "page": "recipepage",
-                        }
+                        },
                     ]
                 },
                 {
@@ -67,7 +70,7 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "Show Recipe",
+                            "name": "ShowRecipe",
                             "icon": "fa-cutlery",
                             "color": "red",
                             "form": {
@@ -76,7 +79,7 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "Add Ingredient",
+                            "name": "AddIngredient",
                             "icon": "fa-apple",
                             "color": "carrot",
                             "form": {
@@ -89,7 +92,7 @@ export class GuiModel {
                             "icon": "fa-apple",
                             "color": "carrot",
                             "search": true,
-                            "url": "/company",
+                            "url": "/recipe/:recipeKey/ingredient",
                             "form": {
                                 "form": "IngredientForm"
                             }
@@ -98,14 +101,14 @@ export class GuiModel {
                 },
                 {
                     "id": "ingredientspage",
-                    "name": "Zutaten",
+                    "name": "Ingredients",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "newButton",
-                            "name": "New Ingredient",
+                            "name": "NewIngredient",
                             "icon": "fa-apple",
                             "color": "red",
                             "form": {
@@ -118,7 +121,7 @@ export class GuiModel {
                             "icon": "fa-apple",
                             "color": "carrot",
                             "search": true,
-                            "url": "/company",
+                            "url": "/ingredient",
                             "page": "ingredientpage"
                         }
                     ]
@@ -132,7 +135,7 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "Edit Ingredient",
+                            "name": "EditIngredient",
                             "icon": "fa-apple",
                             "color": "red",
                             "form": {
@@ -145,7 +148,7 @@ export class GuiModel {
                             "icon": "fa-cutlery",
                             "color": "blue",
                             "search": true,
-                            "url": "/person",
+                            "url": "/ingredient/:ingredientKey/recipe",
                             "page": "recipepage"
                         }
                     ]
@@ -159,7 +162,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": "New Region",
+                            "name": "NewRegion",
                             "icon": "fa-globe",
                             "color": "red",
                             "form": {
@@ -172,7 +175,7 @@ export class GuiModel {
                             "icon": "fa-globe",
                             "color": "yellow",
                             "search": true,
-                            "url": "/project",
+                            "url": "/region",
                             "page": "regionpage"
                         }
                     ]
@@ -186,7 +189,7 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "Edit Region",
+                            "name": "EditRegion",
                             "icon": "fa-globe",
                             "color": "red",
                             "form": {
@@ -199,7 +202,7 @@ export class GuiModel {
                             "icon": "fa-cutlery",
                             "color": "blue",
                             "search": true,
-                            "url": "/person",
+                            "url": "/region/:regionKey/recipe",
                             "page": "recipepage"
                         }
                     ]
@@ -209,19 +212,19 @@ export class GuiModel {
                 {
                     "id": "RecipeForm",
                     "title": "Recipe",
-                    "url": "/person",
+                    "url": "/recipe",
                     "formFieldList": [
                         {
                             "id": "recipeName",
                             "type": "text",
-                            "name": "Recipe Name",
+                            "name": "RecipeName",
                             "width": 2,
                             "required": true
                         },
                         {
                             "id": "preparationTime",
                             "type": "number",
-                            "name": "Preparationtime in minutes",
+                            "name": "PreparationtimeInMinutes",
                             "width": 2,
                             "required": true
                         },
@@ -232,7 +235,7 @@ export class GuiModel {
                             "wordSearchEnabled": true,
                             "defaultKey": "regionKey",
                             "form": "RegionForm",
-                            "url": "/project",
+                            "url": "/region",
                             "width": 2,
                             "required": false
                         },
@@ -260,9 +263,79 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "IngredientForm",
+                    "title": "Ingredient",
+                    "url": "/ingredient",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "IngredientName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "season",
+                            "type": "text",
+                            "name": "Season",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "calories",
+                            "type": "number",
+                            "name": "CaloriesPer100g",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "RegionForm",
+                    "title": "Region",
+                    "url": "/region",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "autocomplete",
+                            "name": "Region",
+                            "width": 2,
+                            "wordSearchEnabled": true,
+                            "defaultKey": "regionKey",
+                            "form": "RegionForm",
+                            "url": "/region",
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
                     "id": "AddIngredientForm",
-                    "title": "Add Ingredient",
-                    "url": "/company",
+                    "title": "AddIngredient",
+                    "url": "/ingredient",
                     "formFieldList": [
                         {
                             "type": "autocomplete",
@@ -284,73 +357,7 @@ export class GuiModel {
                             "name": "Ok"
                         }
                     ]
-                },
-                {
-                    "id": "RegionForm",
-                    "title": "Region",
-                    "url": "/project",
-                    "formFieldList": [
-                        {
-                            "type": "autocomplete",
-                            "name": "Region",
-                            "width": 2,
-                            "url": "/project",
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "IngredientForm",
-                    "title": "Ingredient",
-                    "url": "/company",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "Ingredient Name",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "season",
-                            "type": "text",
-                            "name": "Season",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "calories",
-                            "type": "number",
-                            "name": "Calories per 100g",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
+                }
             ]
         }
     };
