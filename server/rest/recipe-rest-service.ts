@@ -47,25 +47,28 @@ export class RecipeRestService extends AbstractRestService {
         this._app.get('/services/services/region/:regionKey/recipe/:regionKey', (req, res) => {
             res.json({ regionKey: req.params.regionKey, recipeKey: req.params.recipeKey });
         });
+        this._app.get('/services/recipe/:recipeKey/ingredient/:ingredientKey', (req, res) => {
+            res.json({ ingredientKey: req.params.ingredientKey, recipeKey: req.params.recipeKey });
+        });
     }
 
     protected initUpdate() {
-       super.initUpdate();
+        super.initUpdate();
 
-       let service = this;
-       this._app.put('/services/ingredient/:ingredientKey/recipe', async (req, res) => {
-           let recipe = await service.database.addIngredient(req.body.recipeKey, req.params.ingredientKey);
-           res.json(recipe);
-       });
+        let service = this;
+        this._app.put('/services/recipe/:recipeKey/ingredient', async (req, res) => {
+            let recipe = await service.database.addIngredient(req.params.recipeKey, req.body.ingredientKey);
+            res.json(recipe);
+        });
     }
 
     protected initDelete() {
-       super.initDelete();
+        super.initDelete();
 
-       let service = this;
-       this._app.delete('/services/ingredient/:ingredientKey/recipe/:recipeKey', async (req, res) => {
-           let recipe = await service.database.deleteIngredient(req.params.recipeKey, req.params.ingredientKey);
-           res.json(recipe);
-       });
+        let service = this;
+        this._app.delete('/services/recipe/:recipeKey/ingredient/:ingredientKey', async (req, res) => {
+            let recipe = await service.database.deleteIngredient(req.params.recipeKey, req.params.ingredientKey);
+            res.json(recipe);
+        });
     }
 }

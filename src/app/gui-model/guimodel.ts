@@ -94,7 +94,7 @@ export class GuiModel {
                             "search": true,
                             "url": "/recipe/:recipeKey/ingredient",
                             "form": {
-                                "form": "IngredientForm"
+                                "form": "AddIngredientForm"
                             }
                         }
                     ]
@@ -112,7 +112,7 @@ export class GuiModel {
                             "icon": "fa-apple",
                             "color": "red",
                             "form": {
-                                "form": "AddIngredientForm"
+                                "form": "IngredientForm"
                             }
                         },
                         {
@@ -161,15 +161,6 @@ export class GuiModel {
                             "type": "backbutton",
                         },
                         {
-                            "type": "newButton",
-                            "name": "NewRegion",
-                            "icon": "fa-globe",
-                            "color": "red",
-                            "form": {
-                                "form": "RegionForm"
-                            }
-                        },
-                        {
                             "type": "list",
                             "name": "RegionsList",
                             "icon": "fa-globe",
@@ -186,15 +177,6 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditRegion",
-                            "icon": "fa-globe",
-                            "color": "red",
-                            "form": {
-                                "form": "RegionForm"
-                            }
                         },
                         {
                             "type": "list",
@@ -334,15 +316,30 @@ export class GuiModel {
                 },
                 {
                     "id": "AddIngredientForm",
-                    "title": "AddIngredient",
-                    "url": "/ingredient",
+                    "title": "Ingredient",
+                    "url": "/recipe/:recipeKey/ingredient",
                     "formFieldList": [
                         {
+                            "id": "ingredientKey",
                             "type": "autocomplete",
                             "name": "Ingredient",
+                            "wordSearchEnabled": true,
+                            "form": "IngredientForm",
+                            "url": "/ingredient",
                             "width": 2,
-                            "url": "/company",
-                            "required": true
+                            "required": true,
+                            "defaultKey": "ingredientKey"
+                        },
+                        {
+                            "id": "recipeKey",
+                            "type": "autocomplete",
+                            "name": "Recipe",
+                            "wordSearchEnabled": true,
+                            "url": "/recipe",
+                            "width": 2,
+                            "required": true,
+                            "readonly": true,
+                            "defaultKey": "recipeKey"
                         },
                         {
                             "type": "deleteButton",
