@@ -28,6 +28,10 @@ export class TestData {
         promises.push(ingredientDatabase.create({name: 'Tomaten', season: '-', calories: '18'}));
         promises.push(ingredientDatabase.create({name: 'Ei', season: '-', calories: '162'}));
         promises.push(ingredientDatabase.create({name: 'Senf', season: '-', calories: '35'}));
+        promises.push(ingredientDatabase.create({name: 'Hamburgerbrötchen', season: '-', calories: '237'}));
+        promises.push(ingredientDatabase.create({name: 'Essiggurken', season: '-', calories: '11'}));
+        promises.push(ingredientDatabase.create({name: 'Eisbergsalat', season: '-', calories: '14'}));
+        promises.push(ingredientDatabase.create({name: 'Ketchup', season: '-', calories: '112'}));
 
             Promise.all(promises).then((ingredients) => {
                 promises = [];
@@ -54,9 +58,9 @@ export class TestData {
                         }));
                         promises.push(recipeDatabase.create({
                             recipeName: 'Hamburger',
-                            preparationTime: '30',
-                            recipe: '1. Zwiebeln, Peperoni, Knoblauch und Karotten in kleine Stücke schneiden\n2. Olivenöl in einer Bratpfanne heiss werden lassen\n3. Zwiebeln, Gemüse und Mais andämpfen\n4. Fleisch beigeben und anbraten\n5. Mit Wein ablöschen und auskochen\n6. Gehackte Tomaten beigeben\n7. Würzen und abschmecken\n\nNebenbei Spaghetti al dente kochen - En guete!',
-                            ingredient: [ingredients[2].key, ingredients[7].key],
+                            preparationTime: '40',
+                            recipe: '1. Zwiebeln würfeln und mit Hackfleisch, Ei, Senf, 2 EL Wasser, Salz, Pfeffer und Paprika gut vermischen\n2. Aus dem Hackteig Hamburger formen\n3. Tomaten, Zwiebeln und Essiggurken in Scheiben schneiden\n4. Hamburgerbrötchen toasten\n5. Hamburger anbraten\n6. Währenddessen Hamburgerbrötchen mit Sauce bestreichen und Tomate, Zwiebeln, Essiggurken und Eisbergsalat darauf verteilen\n7. Hamburgerfleisch auf den Burger legen und den Burger zudecken - En guete!',
+                            ingredient: [ingredients[0].key, ingredients[7].key, ingredients[15].key, ingredients[16].key, ingredients[17].key, ingredients[18].key, ingredients[19].key, ingredients[20].key, ingredients[21].key],
                             region: regions[2].key
                         }));
             }

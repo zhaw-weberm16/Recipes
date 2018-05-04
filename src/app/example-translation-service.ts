@@ -17,28 +17,7 @@ export class ExampleTranslationService extends TranslationService {
         let languageCode: string = this.getUserLanguage();
 
         // put additional application translations here
-        if (languageCode == "de") {
-            return {
-                "Recipes": "Rezepte",
-                "Ingredients": "Zutaten",
-                "Regions": "Regionen",
-                "NewRecipe": "Neues Rezept",
-                "RecipeName": "Rezeptname",
-                "PreparationtimeInMinutes": "Zubereitungszeit (min)",
-                "Region": "Region",
-                "Recipe": "Rezept",
-                "NewIngredient": "Neue Zutat",
-                "Ingredient": "Zutat",
-                "IngredientName": "Name der Zutat",
-                "Season": "Saison",
-                "CaloriesPer100g": "Kalorien pro 100g",
-                "NewRegion": "Neue Region",
-                "ShowRecipe": "Rezept anzeigen",
-                "AddIngredient": "Zutat hinzufügen",
-                "EditIngredient": "Zutat bearbeiten",
-                "EditRegion": "Region bearbeiten"
-            }
-        } else {
+        if (languageCode == "en") {
             return {
                 "Recipes": "Recipes",
                 "Ingredients": "Ingredients",
@@ -58,6 +37,27 @@ export class ExampleTranslationService extends TranslationService {
                 "AddIngredient": "Add Ingredient",
                 "EditIngredient": "Edit Ingredient",
                 "EditRegion": "Edit Region"
+            }
+        } else {
+            return {
+                "Recipes": "Rezepte",
+                "Ingredients": "Zutaten",
+                "Regions": "Regionen",
+                "NewRecipe": "Neues Rezept",
+                "RecipeName": "Rezeptname",
+                "PreparationtimeInMinutes": "Zubereitungszeit (min)",
+                "Region": "Region",
+                "Recipe": "Rezept",
+                "NewIngredient": "Neue Zutat",
+                "Ingredient": "Zutat",
+                "IngredientName": "Name der Zutat",
+                "Season": "Saison",
+                "CaloriesPer100g": "Kalorien pro 100g",
+                "NewRegion": "Neue Region",
+                "ShowRecipe": "Rezept anzeigen",
+                "AddIngredient": "Zutat hinzufügen",
+                "EditIngredient": "Zutat bearbeiten",
+                "EditRegion": "Region bearbeiten"
             };
         }
     }
