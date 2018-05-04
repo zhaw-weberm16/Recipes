@@ -46,7 +46,7 @@ export class ExampleAppComponent extends path.PathAppComponent {
             return location.protocol + "//path-example-angular-cli.herokuapp.com/services";
         }
         else if (window.location.hostname.indexOf("herokuapp") != -1) {
-            return location.protocol + "//path-example-weberm16.herokuapp.com/services";
+            return location.protocol + "//path-recipes.herokuapp.com/services";
         }
         return "http://localhost:8080/services";
     }
