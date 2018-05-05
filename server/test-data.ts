@@ -22,7 +22,7 @@ export class TestData {
         promises.push(ingredientDatabase.create({name: 'Pouletbrust', season: '-', calories: '239'}));
         promises.push(ingredientDatabase.create({name: 'Rote Curry Paste', season: '-', calories: '112'}));
         promises.push(ingredientDatabase.create({name: 'Kokosnussmilch', season: '-', calories: '230'}));
-        promises.push(ingredientDatabase.create({name: 'Asiatisches Gemüse (tiefgefroren)', season: '-', calories: '134'}));
+        promises.push(ingredientDatabase.create({name: 'Asiatisches Gemüse', season: '-', calories: '134'}));
         promises.push(ingredientDatabase.create({name: 'Jasminreis', season: '-', calories: '350'}));
         promises.push(ingredientDatabase.create({name: 'Fischsauce', season: '-', calories: '35'}));
         promises.push(ingredientDatabase.create({name: 'Tomaten', season: 'Sommer', calories: '18'}));

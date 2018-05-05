@@ -46,6 +46,7 @@ export class GuiModel {
                             "name": "NewRecipe",
                             "icon": "fa-cutlery",
                             "color": "red",
+                            "width": 2,
                             "form": {
                                 "form": "RecipeForm"
                             }
@@ -73,6 +74,7 @@ export class GuiModel {
                             "name": "ShowRecipe",
                             "icon": "fa-cutlery",
                             "color": "red",
+                            "width": 2,
                             "form": {
                                 "form": "RecipeForm"
                             }
@@ -82,6 +84,7 @@ export class GuiModel {
                             "name": "AddIngredient",
                             "icon": "fa-apple",
                             "color": "carrot",
+                            "width": 2,
                             "form": {
                                 "form": "AddIngredientForm"
                             }
@@ -111,6 +114,7 @@ export class GuiModel {
                             "name": "NewIngredient",
                             "icon": "fa-apple",
                             "color": "red",
+                            "width": 2,
                             "form": {
                                 "form": "IngredientForm"
                             }
@@ -138,6 +142,7 @@ export class GuiModel {
                             "name": "EditIngredient",
                             "icon": "fa-apple",
                             "color": "red",
+                            "width": 2,
                             "form": {
                                 "form": "IngredientForm"
                             }
@@ -147,7 +152,7 @@ export class GuiModel {
                             "name": "RecipeList",
                             "icon": "fa-cutlery",
                             "color": "blue",
-                            "search": true,
+                            "search": false,
                             "url": "/ingredient/:ingredientKey/recipe",
                             "page": "recipepage"
                         }
@@ -165,7 +170,7 @@ export class GuiModel {
                             "name": "RegionsList",
                             "icon": "fa-globe",
                             "color": "yellow",
-                            "search": true,
+                            "search": false,
                             "url": "/region",
                             "page": "regionpage"
                         }
