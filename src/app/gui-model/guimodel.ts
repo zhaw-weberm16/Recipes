@@ -139,7 +139,7 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "EditIngredient",
+                            "name": "ShowIngredient",
                             "icon": "fa-apple",
                             "color": "red",
                             "width": 2,

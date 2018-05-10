@@ -42,13 +42,7 @@ export class ExampleAppComponent extends path.PathAppComponent {
     }
 
     public getBackendUrl() {
-        if (window.location.hostname.indexOf("angular-cli") != -1) {
-            return location.protocol + "//path-example-angular-cli.herokuapp.com/services";
-        }
-        else if (window.location.hostname.indexOf("herokuapp") != -1) {
-            return location.protocol + "//path-recipes.herokuapp.com/services";
-        }
-        return "http://localhost:8080/services";
+        return "https://path-recipes.herokuapp.com/services";
     }
     
     protected getBeans() {

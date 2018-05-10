@@ -35,7 +35,7 @@ export class ExampleTranslationService extends TranslationService {
                 "NewRegion": "New Region",
                 "ShowRecipe": "Show Recipe",
                 "AddIngredient": "Add Ingredient",
-                "EditIngredient": "Edit Ingredient",
+                "ShowIngredient": "Show Ingredient",
                 "EditRegion": "Edit Region"
             }
         } else {
@@ -56,7 +56,7 @@ export class ExampleTranslationService extends TranslationService {
                 "NewRegion": "Neue Region",
                 "ShowRecipe": "Rezept anzeigen",
                 "AddIngredient": "Zutat hinzufügen",
-                "EditIngredient": "Zutat bearbeiten",
+                "ShowIngredient": "Zutat anzeigen",
                 "EditRegion": "Region bearbeiten"
             };
         }
