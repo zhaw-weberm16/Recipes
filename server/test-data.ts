@@ -60,7 +60,7 @@ export class TestData {
                             recipeName: 'Hamburger',
                             preparationTime: '40',
                             recipe: '1. Zwiebeln würfeln und mit Hackfleisch, Ei, Senf, 2 EL Wasser, Salz, Pfeffer und Paprika gut vermischen\n2. Aus dem Hackteig Hamburger formen\n3. Tomaten, Zwiebeln und Essiggurken in Scheiben schneiden\n4. Hamburgerbrötchen toasten\n5. Hamburger anbraten\n6. Währenddessen Hamburgerbrötchen mit Sauce bestreichen und Tomate, Zwiebeln, Essiggurken und Eisbergsalat darauf verteilen\n7. Hamburgerfleisch auf den Burger legen und den Burger zudecken - En guete!',
-                            ingredient: [ingredients[0].key, ingredients[7].key, ingredients[15].key, ingredients[16].key, ingredients[17].key, ingredients[18].key, ingredients[19].key, ingredients[20].key, ingredients[21].key],
+                            ingredient: [ingredients[0].key, ingredients[6].key, ingredients[15].key, ingredients[16].key, ingredients[17].key, ingredients[18].key, ingredients[19].key, ingredients[20].key, ingredients[21].key],
                             region: regions[2].key
                         }));
             }
